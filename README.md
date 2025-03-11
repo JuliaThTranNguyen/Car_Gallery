@@ -2,7 +2,16 @@
 
 ### Next.js 15 + Tailwind CSS 3 + TypeScript. Author: Hien Thuy, Tran Nguyen -TH.Julia
 
-#### Warning: Next.js 15 is still in beta. Please use it with caution. Moreover, tailwindcss 4 is not compatible with Next.js 15. So, we use tailwindcss 3 in this project.
+#### Warning: 
+Next.js 15 is still in beta. Please use it with caution. Moreover, tailwindcss 4 is not compatible with Next.js 15. So, we use tailwindcss 3 in this project.
+
+#### How did i create this project
+![image](https://github.com/user-attachments/assets/2d24f9e5-8f80-407d-b31a-ae885fb3b8bb)
+
+By default, Next 15 will automatically installed Tailwindcss 4 as the latest version. So in this case, do as this next following step:
+![image](https://github.com/user-attachments/assets/9b6fad4c-ed1a-495d-ab52-c2e0cf2b2ac9)
+
+As long as your Tailwindcss version is 3.x.x . Then everything is good to go.
 
 #### Modify the global.css file to use tailwindcss 3
 
