@@ -1,0 +1,41 @@
+/* START: Header styles */
+
+  /* This is just an optional extra if you'd like to add custom styling or tweak things further */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #1D4ED8; /* Tailwind Blue */
+  }
+  
+  .header__logo-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .header__nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .header__nav-link:hover {
+    color: #FBBF24; /* Tailwind Yellow */
+  }
+  
+  .header__btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #FBBF24; /* Tailwind Yellow */
+    color: black;
+    border-radius: 9999px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header__btn:hover {
+    background-color: #F59E0B; /* Darker Yellow */
+  }
+  
+  /* END: Header styles */
+  

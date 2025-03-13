@@ -1,0 +1,41 @@
+/* START: Footer styles */
+.footer {
+    @apply bg-gray-900 text-white py-6 text-center;
+  }
+  
+  .footer__links-container {
+    @apply flex flex-wrap justify-between items-center gap-6 sm:px-16 px-6 py-8;
+  }
+  
+  .footer__rights {
+    @apply text-sm text-gray-400;
+  }
+  
+  .footer__links {
+    @apply flex space-x-6 text-gray-400 text-sm;
+  }
+  
+  .footer__link {
+    @apply flex flex-col space-y-2;
+  }
+  
+  .footer__link h3 {
+    @apply text-lg font-semibold text-white;
+  }
+  
+  .footer__link a {
+    @apply hover:text-yellow-400 transition;
+  }
+  
+  .footer__copyrights {
+    @apply border-t border-gray-700 pt-5 mt-6;
+  }
+  
+  .footer__copyrights-link {
+    @apply flex space-x-5 justify-center text-gray-400 text-sm;
+  }
+  
+  .footer__copyrights-link a:hover {
+    @apply text-yellow-400 transition;
+  }
+  
