@@ -22,9 +22,9 @@
   @apply mb-2 text-blue-900 font-extrabold text-2xl relative;
   background-image: linear-gradient(
     to right,
-    rgb(11, 61, 200),
-    rgb(186, 106, 210),
-    rgb(231, 122, 122)
+    rgb(14, 79, 190),
+    rgb(139, 34, 172),
+    rgb(14, 231, 209)
   ); /* Define the gradient */
   -webkit-background-clip: text; /* Clip the background to the text */
   background-clip: text; /* Standardize background clipping */
@@ -35,8 +35,8 @@
   background-image: linear-gradient(
     to right,
     rgb(72, 57, 165),
-    rgb(197, 38, 228),
-    rgb(13, 205, 226)
+    rgb(80, 239, 247),
+    rgb(241, 88, 192)
   ); /* Different gradient on hover */
 }
 /* Underline animation using a pseudo-element */

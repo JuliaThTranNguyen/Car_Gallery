@@ -37,13 +37,11 @@
 }
 
 .outline-button {
-  @apply button-base bg-gradient-to-tr from-blue-900 via-purple-400 to-blue-800 text-white;
-  background-color: white; /* Ensure background color stays white */
-  border: none; /* Remove border to let the wrapper show */
+  @apply button-base bg-gradient-to-tr from-blue-600 via-purple-700 to-green-400 text-white;
 }
 
 .outline-button:hover {
-  @apply bg-gradient-to-br from-purple-600 via-pink-500 to-blue-500 text-white;
+  @apply bg-gradient-to-br from-purple-900 via-pink-600 to-blue-900 text-white;
 }
 
 .outline-button:focus {
