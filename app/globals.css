@@ -15,6 +15,7 @@
 @import "./styles/layout.css";
 
 /*Other components*/
+@import "./styles/buttons.css";
 @import "./styles/hero.css";
 @import "./styles/footer.css";
 @import "./styles/searchbar.css";
@@ -22,7 +23,7 @@
 @import "./styles/car-card.css";
 @import "./styles/car-details.css";
 @import "./styles/filter.css";
-
+@import "./styles/header.css";
 
 
 

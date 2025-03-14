@@ -1,41 +1,139 @@
-/* START: Header styles */
+/* header.css */
 
-  /* This is just an optional extra if you'd like to add custom styling or tweak things further */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Flex container for header */
+.header-section {
+  @apply flex font-bold justify-between items-center py-2 px-6 bg-white shadow-xl;
+}
+
+/* Left side of header: Logo and App Name */
+.header-left-container {
+  @apply flex items-center;
+}
+
+.logo {
+  @apply flex items-center;
+}
+
+.logo-icon {
+  @apply w-16 h-16 mr-2;
+}
+
+.app-name {
+  @apply mb-2 text-blue-900 font-extrabold text-2xl relative;
+  background-image: linear-gradient(
+    to right,
+    rgb(11, 61, 200),
+    rgb(186, 106, 210),
+    rgb(231, 122, 122)
+  ); /* Define the gradient */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* Standardize background clipping */
+  color: transparent; /* Make the text color transparent so the gradient shows */
+  transition: background-image 0.5s ease; /* Smooth transition for the gradient effect */
+}
+.app-name:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(72, 57, 165),
+    rgb(197, 38, 228),
+    rgb(13, 205, 226)
+  ); /* Different gradient on hover */
+}
+/* Underline animation using a pseudo-element */
+.app-name::after {
+  content: ""; /* Create a pseudo-element */
+  position: absolute;
+  bottom: 0; /* Position it at the bottom of the text */
+  left: 0;
+  width: 0; /* Initially, the underline is 0 width */
+  height: 2px; /* Thickness of the underline */
+  background-color: blue; /* Blue color for the underline */
+  transition: width 2s ease-out; /* Animate the width over 2 seconds */
+}
+
+.app-name:hover::after {
+  width: 100%; /* On hover, the underline expands to full width */
+}
+
+/* Right side of header: Navigation and CTA */
+.header-right-container {
+  @apply flex items-center space-x-6;
+}
+
+.nav-menu .menu-list {
+  @apply flex space-x-6;
+}
+
+/*For the nav-bar menu list & navigator links*/
+.nav-menu li {
+  @apply text-gray-900 no-underline relative; /* Ensure no underline by default */
+}
+
+.nav-menu li:hover {
+  @apply text-blue-500 italic; /* Italicize text and change color to blue */
+}
+
+/* Underline animation using a pseudo-element */
+.nav-menu li::after {
+  content: ""; /* Create a pseudo-element */
+  position: absolute;
+  bottom: 0; /* Position it at the bottom of the text */
+  left: 0;
+  width: 0; /* Initially, the underline is 0 width */
+  height: 2px; /* Thickness of the underline */
+  background-color: blue; /* Blue color for the underline */
+  transition: width 2s ease-out; /* Animate the width over 2 seconds */
+}
+
+.nav-menu li:hover::after {
+  width: 100%; /* On hover, the underline expands to full width */
+}
+
+/*Media design for smaller screens*/
+/* Show the menu icon on screens smaller than 520px */
+@media screen and (max-width: 519px) {
+  .app-name {
+    @apply hidden;
+  }
+}
+
+/* Show the menu icon on screens smaller than 820px */
+@media screen and (max-width: 820px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none; /* Hide the nav menu by default on mobile */
+  }
+
+  .nav-menu.block {
+    display: block; /* Show the nav menu when the menuOpen state is true */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
     padding: 1rem;
-    background-color: #1D4ED8; /* Tailwind Blue */
   }
-  
-  .header__logo-img {
-    width: 40px;
-    height: 40px;
+
+  .nav-menu .menu-list {
+    flex-direction: column; /* Stack menu items vertically */
   }
-  
-  .header__nav-link {
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
+
+  .nav-menu li {
+    margin-bottom: 1rem; /* Space between items */
   }
-  
-  .header__nav-link:hover {
-    color: #FBBF24; /* Tailwind Yellow */
+}
+
+/* Large screens: Menu is always visible */
+@media screen and (min-width: 821px) {
+  .nav-menu {
+    display: block; /* Always display the menu on larger screens */
   }
-  
-  .header__btn {
-    padding: 0.5rem 1.5rem;
-    background-color: #FBBF24; /* Tailwind Yellow */
-    color: black;
-    border-radius: 9999px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  .menu-icon {
+    display: none; /* Hide the menu icon on larger screens */
   }
-  
-  .header__btn:hover {
-    background-color: #F59E0B; /* Darker Yellow */
-  }
-  
-  /* END: Header styles */
-  
+}

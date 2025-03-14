@@ -1,0 +1,51 @@
+/*This file contains the styles for the buttons used in the project*/
+/*General button styling*/
+.button-base {
+  @apply p-2 font-bold rounded-full transition-all duration-300 ease-in-out;
+}
+
+/* Basic Button with Hover Effects */
+.basic-button {
+  @apply button-base bg-blue-600 text-white;
+}
+
+.basic-button:hover {
+  @apply bg-blue-400 shadow-2xl scale-105 border-2 border-dashed border-white;
+}
+
+.basic-button:focus {
+  @apply ring-4 ring-green-300;
+}
+
+/* Pill Button with Shadow and Hover Animation */
+.cancel-button {
+  @apply button-base bg-red-600 text-white;
+}
+
+.cancel-button:hover {
+  @apply bg-yellow-400 shadow-2xl scale-105 border-x-4 border-dashed;
+}
+
+.cancel-button:focus {
+  @apply ring-4 ring-red-300;
+}
+
+/* Outline Button with Hover and Focus Effects */
+.outline-button-wrapper {
+  @apply p-0.5 inline-block rounded-full;
+  background-image: linear-gradient(to right, pink, lightblue, lightgreen);
+}
+
+.outline-button {
+  @apply button-base bg-gradient-to-tr from-blue-900 via-purple-400 to-blue-800 text-white;
+  background-color: white; /* Ensure background color stays white */
+  border: none; /* Remove border to let the wrapper show */
+}
+
+.outline-button:hover {
+  @apply bg-gradient-to-br from-purple-600 via-pink-500 to-blue-500 text-white;
+}
+
+.outline-button:focus {
+  @apply ring-4 ring-gray-300;
+}
