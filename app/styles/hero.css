@@ -1,25 +1,98 @@
+/*This file contains the styles for the hero section of the project*/
 /* START: Hero styles */
-.hero {
+.hero-section {
   @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
 }
 
-.hero__title {
-  @apply text-2xl sm:text-sm md:text-lg font-extrabold;
+.hero_left-container {
+  @apply flex-1 pt-12 px-10;
+}
+.hero_title {
+  @apply font-serif text-3xl sm:text-sm md:text-4xl lg:text-6xl font-extrabold;
 }
 
-.hero__subtitle {
-  @apply text-sm text-black font-light mt-5;
+.hero_subtitle {
+  @apply font-medium text-lg md:text-2xl lg:text-3xl text-black mt-5;
 }
 
-.hero__image-container {
-  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
+.hero_text {
+  @apply font-mono font-normal text-sm sm:text-lg md:text-lg lg:text-xl  text-gray-950 mt-5 mb-6;
 }
 
-.hero__image {
-  @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
+.hero_image-container {
+  @apply xl:flex-[1.5] flex justify-center items-center w-full xl:h-screen relative;
 }
 
-.hero__image-overlay {
-  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-gray-200 bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+.hero_image-wrapper {
+  @apply relative w-[90%] xl:w-full h-[500px] xl:h-screen; /* Set a fixed height */
 }
-/* END: Hero styles */
+
+.hero_image {
+  @apply absolute inset-0 w-full h-full object-cover; /* Scales images consistently */
+}
+
+.hero__image-overlay_circle {
+  @apply absolute bottom-16 -right-1/2 bg-repeat-round -z-10  overflow-hidden;
+  background-image: url("/hero.svg");
+}
+
+.hero__image-overlay_bg {
+  @apply absolute  -right-1/4 bg-repeat-round mt-[76px] -z-10 overflow-hidden;
+  background-image: url("/hero_bg.png");
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents repeating the background */
+}
+
+@media screen and (max-width: 375px) {
+  .hero__image-overlay_circle {
+    @apply hidden;
+  }
+
+  .hero__image-overlay_bg {
+    @apply w-[100%] h-[50%];
+  }
+}
+
+@media (min-width: 376px) and (max-width: 530px) {
+  .hero__image-overlay_bg {
+    @apply hidden;
+  }
+
+  .hero__image-overlay_circle {
+    @apply w-[180%] h-full;
+  }
+}
+
+@media (min-width: 531px) and (max-width: 654px) {
+  .hero__image-overlay_bg {
+    @apply hidden;
+  }
+
+  .hero__image-overlay_circle {
+    @apply w-[220%] h-full -left-40;
+  }
+}
+
+@media (min-width: 655px) and (max-width: 1100px) {
+  .hero__image-overlay_bg {
+    @apply w-[86%] h-[80%];
+  }
+  .hero_image {
+    @apply pt-40 pr-28;
+  }
+
+  .hero__image-overlay_circle {
+    @apply hidden;
+  }
+}
+
+@media (min-width: 1101px) {
+  .hero__image-overlay_bg {
+    @apply hidden;
+  }
+
+  .hero__image-overlay_circle {
+    @apply w-[250%] h-full -right-64 -top-0;
+  }
+}

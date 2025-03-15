@@ -23,7 +23,7 @@ const Header = () => {
 
       <div className="header-right-container">
         <div
-          className="menu-icon sm:hidden text-2xl cursor-pointer"
+          className="menu-icon"
           onClick={toggleMenu}
         >
           📑 Menu
@@ -52,7 +52,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="outline-button-wrapper">
-          <button className="outline-button">Get started</button>
+          <button className="basic-button">Sign in</button>
         </div>
       </div>
     </header>

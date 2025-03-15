@@ -119,6 +119,13 @@ module.exports = {
 
 Make sure your in installed version of tailwindcss is 3.x.x
 
+#### Other installations:
+In this project, i used Font Awesome icons. So, you need to install it by yourself.
+
+```
+npm install @fortawesome/fontawesome-free
+```
+
 -------------------------------------------------------------------------- 
 
 

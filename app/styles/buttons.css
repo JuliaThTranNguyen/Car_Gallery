@@ -1,7 +1,7 @@
 /*This file contains the styles for the buttons used in the project*/
 /*General button styling*/
 .button-base {
-  @apply p-2 font-bold rounded-full transition-all duration-300 ease-in-out;
+  @apply p-2 font-bold hover:font-serif rounded-full transition-all duration-300 ease-in-out;
 }
 
 /* Basic Button with Hover Effects */
@@ -10,7 +10,7 @@
 }
 
 .basic-button:hover {
-  @apply bg-blue-400 shadow-2xl scale-105 border-2 border-dashed border-white;
+  @apply bg-blue-900 shadow-2xl scale-105 border-2 border-dashed border-white;
 }
 
 .basic-button:focus {
@@ -32,7 +32,7 @@
 
 /* Outline Button with Hover and Focus Effects */
 .outline-button-wrapper {
-  @apply p-0.5 inline-block rounded-full;
+  @apply p-[2.5px] inline-block rounded-full;
   background-image: linear-gradient(to right, pink, lightblue, lightgreen);
 }
 
