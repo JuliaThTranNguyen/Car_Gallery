@@ -1,4 +1,4 @@
-import Hero from "@/componenets/Hero";
+import Hero from "@/componenets/layout/Hero";
 
 export default function Home() {
   return (

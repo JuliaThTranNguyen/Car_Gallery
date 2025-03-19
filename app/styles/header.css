@@ -13,18 +13,30 @@
 }
 
 .logo-icon {
-  @apply w-14 h-14 mr-2; 
+  @apply w-14 h-14 mr-2;
 }
 
 /* App Name with Gradient */
 .app-name {
   @apply text-2xl font-extrabold bg-clip-text text-transparent relative;
-  background-image: linear-gradient(to right, #0e4fbe, #f439c5, #8b22ac, #02ddc7);
+  background-image: linear-gradient(
+    to right,
+    #0e4fbe,
+    #f439c5,
+    #8b22ac,
+    #02ddc7
+  );
   transition: background-image 0.5s ease-in-out;
 }
 
 .app-name:hover {
-  background-image: linear-gradient(to right,#ae0bcb, #4839a5, #4fe9f4, #2e2e98);
+  background-image: linear-gradient(
+    to right,
+    #ae0bcb,
+    #4839a5,
+    #4fe9f4,
+    #2e2e98
+  );
 }
 
 /* Underline Animation */
@@ -37,27 +49,27 @@
   @apply w-full;
 }
 
-/* Right side: Navigation & CTA */
+/* Right side of header: Navigation and CTA */
 .header-right-container {
   @apply flex items-center space-x-6;
 }
 
-/* Navigation Menu */
 .nav-menu .menu-list {
   @apply flex space-x-6;
 }
 
+/*For the nav-bar menu list & navigator links*/
 .nav-menu li {
-  @apply relative text-gray-900 transition-colors duration-300;
+  @apply text-gray-900 no-underline relative;
 }
 
 .nav-menu li:hover {
   @apply text-blue-500 italic;
 }
 
-/* Underline Animation for Nav Links */
+/* Underline animation using a pseudo-element */
 .nav-menu li::after {
-  @apply absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-500 ease-out;
+  @apply absolute left-0 bottom-0 w-0 h-[1px] bg-blue-500 transition-all duration-500 ease-out;
   content: "";
 }
 
@@ -65,14 +77,22 @@
   @apply w-full;
 }
 
-/* Responsive Navbar */
-@media (max-width: 820px) {
+/* Media design for smaller screens */
+/* Show the menu icon on screens smaller than 520px */
+@media screen and (max-width: 519px) {
+  .app-name {
+    @apply hidden;
+  }
+}
+
+/* Show the menu icon on screens smaller than 999px */
+@media screen and (max-width: 879px) {
   .menu-icon {
-    @apply block;
+    @apply block cursor-pointer;
   }
 
   .nav-menu {
-    @apply hidden absolute top-[60px] left-0 right-0 bg-white shadow-lg z-10 p-4;
+    @apply absolute hidden top-28 left-0 right-0 bg-white shadow-lg z-50 p-6;
   }
 
   .nav-menu.show {
@@ -80,12 +100,29 @@
   }
 
   .nav-menu .menu-list {
-    @apply flex flex-col space-y-4;
+    @apply flex flex-col;
+  }
+
+  .nav-menu li {
+    @apply mb-4;
+  }
+
+  .nav-menu li:hover::after {
+    @apply w-[10%];
+  }
+
+  .top-li {
+    @apply ml-6 mb-0;
   }
 }
 
-@media (min-width: 821px) {
+/* Large screens: Menu is always visible */
+@media (min-width: 880px) {
   .menu-icon {
     @apply hidden;
+  }
+
+  .nav-menu {
+    @apply block;
   }
 }

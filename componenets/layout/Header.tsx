@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import logo from "../public/car.ico";
+import logo from "@/public/car.ico";
 import Image from "next/image";
 import { useState } from "react";
+import Button from "../ui/Button";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,37 +23,35 @@ const Header = () => {
       </div>
 
       <div className="header-right-container">
-        <div
-          className="menu-icon"
-          onClick={toggleMenu}
-        >
+        <div className="menu-icon" onClick={toggleMenu}>
           📑 Menu
         </div>
 
-        <nav className={`nav-menu ${menuOpen ? "block" : "hidden"} sm:block`}>
+        <nav className={`nav-menu ${menuOpen ? "show" : "hidden"}`}>
           <ul className="menu-list">
-            <li>
-              <Link href="/about">About</Link>
+            <li className="top-li">
+              <Link href="#">About</Link>
             </li>
             <li>
-              <Link href="/service">Service</Link>
+              <Link href="#">Service</Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="#">Contact</Link>
             </li>
             <li>
-              <Link href="/buy">Buy</Link>
+              <Link href="#">Buy</Link>
             </li>
             <li>
-              <Link href="/sell">Sell</Link>
+              <Link href="#">Sell</Link>
             </li>
             <li>
-              <Link href="/rent">Rent</Link>
+              <Link href="#">Rent</Link>
             </li>
           </ul>
         </nav>
+
         <div className="outline-button-wrapper">
-          <button className="basic-button">Sign in</button>
+          <Button text="Sign up" variant="basic" />
         </div>
       </div>
     </header>

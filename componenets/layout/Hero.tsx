@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import CarImage from "../public/hero_car.png";
+import CarImage from "@/public/hero_car.png";
 
 function Hero() {
   return (
@@ -27,8 +27,8 @@ function Hero() {
           <Image
             src={CarImage}
             alt="car"
-            layout="fill"
-            objectFit="contain"
+            fill
+            style={{ objectFit: "contain" }}
             className="hero_image"
           />
 
