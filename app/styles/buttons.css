@@ -1,49 +1,29 @@
-/*This file contains the styles for the buttons used in the project*/
-/*General button styling*/
+/* Button styles */
+
+/* General button styling */
 .button-base {
-  @apply p-2 font-bold hover:font-serif rounded-full transition-all duration-300 ease-in-out;
+  @apply p-2 font-bold rounded-full transition-all duration-300 ease-in-out
+         hover:italic hover:font-bold hover:shadow-2xl;
 }
 
-/* Basic Button with Hover Effects */
+/* Basic Button */
 .basic-button {
-  @apply button-base bg-blue-600 text-white;
+  @apply button-base bg-blue-600 text-white hover:bg-blue-900 hover:shadow-2xl 
+         hover:scale-105 hover:border-2 hover:border-dashed hover:border-white focus:ring-4 focus:ring-green-300;
 }
 
-.basic-button:hover {
-  @apply bg-blue-900 shadow-2xl scale-105 border-2 border-dashed border-white;
-}
-
-.basic-button:focus {
-  @apply ring-4 ring-green-300;
-}
-
-/* Pill Button with Shadow and Hover Animation */
+/* Cancel Button */
 .cancel-button {
-  @apply button-base bg-red-600 text-white;
+  @apply button-base bg-red-600 text-white hover:bg-yellow-400 hover:shadow-2xl 
+         hover:scale-105 hover:border-x-4 hover:border-dashed focus:ring-4 focus:ring-red-300;
 }
 
-.cancel-button:hover {
-  @apply bg-yellow-400 shadow-2xl scale-105 border-x-4 border-dashed;
-}
-
-.cancel-button:focus {
-  @apply ring-4 ring-red-300;
-}
-
-/* Outline Button with Hover and Focus Effects */
+/* Outline Button */
 .outline-button-wrapper {
-  @apply p-[2.5px] inline-block rounded-full;
-  background-image: linear-gradient(to right, pink, lightblue, lightgreen);
+  @apply p-[2.5px] inline-block rounded-full bg-gradient-to-r from-pink-400 via-blue-400 to-green-400;
 }
 
 .outline-button {
-  @apply button-base bg-gradient-to-tr from-blue-600 via-purple-700 to-green-400 text-white;
-}
-
-.outline-button:hover {
-  @apply bg-gradient-to-br from-purple-900 via-pink-600 to-blue-900 text-white;
-}
-
-.outline-button:focus {
-  @apply ring-4 ring-gray-300;
+  @apply button-base bg-gradient-to-tr from-blue-600 via-purple-700 to-green-400 text-white 
+         hover:bg-gradient-to-br hover:from-blue-900 hover:via-purple-500 hover:to-green-600 focus:ring-4 focus:ring-gray-300;
 }

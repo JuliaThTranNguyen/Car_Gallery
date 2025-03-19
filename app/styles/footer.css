@@ -1,30 +1,15 @@
-/* footer.css */
-
-/* General footer container */
+/* Footer Styles */
 .footer-section {
-  @apply bg-gray-900 shadow-black text-white max-w-full max-h-screen;
+  @apply bg-gray-900 shadow-black text-white w-full min-h-[40vh] py-8;
 }
 
-/* Inner container for centering the content */
 .footer-top-container {
-  @apply mx-auto px-4 py-8;
+  @apply mx-auto px-4;
 }
 
 /* Grid layout for footer content */
 .footer-grid {
-  @apply pl-4 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
-}
-
-@media (min-width: 640px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr); /* sm:grid-cols-2 */
-  }
-}
-
-@media (min-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: repeat(4, 1fr); /* lg:grid-cols-4 */
-  }
+  @apply grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4;
 }
 
 .footer-title {
@@ -32,40 +17,39 @@
 }
 
 .footer-description {
-  @apply text-sm mt-2;
+  @apply text-sm mt-2 text-gray-400;
 }
 
 .footer-subtitle {
-  @apply font-semibold mb-4;
+  @apply font-semibold mb-4 text-gray-300;
 }
 
 .footer-links {
-  @apply list-none pl-0;
+  @apply list-none;
 }
 
 .footer-link {
-  @apply text-sm font-bold text-blue-400 hover:text-yellow-400 transition-all duration-300 ease-in-out;
+  @apply text-sm font-bold text-blue-400 hover:text-yellow-400 transition-colors duration-300;
 }
 
-/* Footer social media icons container */
+/* Social media icons */
 .footer-social-icons {
-  @apply flex gap-4;
+  @apply flex gap-4 mt-4;
 }
 
 .footer-social-icon {
-  @apply text-blue-400 hover:text-yellow-400 transition-all duration-300 ease-in-out;
+  @apply text-blue-400 hover:text-yellow-400 transition-colors duration-300;
 }
 
-/* Footer bottom text */
+/* Footer bottom section */
 .footer-bottom-container {
-  @apply py-4 bg-gray-950 shadow-2xl font-semibold text-lg text-center justify-center;
+  @apply py-4 bg-gray-950 shadow-2xl text-lg text-center;
 }
 
 .footer-bottom-text {
-  @apply text-sm text-gray-500 mt-2;
+  @apply text-sm text-gray-500;
 }
 
 .footer-bottom-text .footer-link {
-  @apply text-blue-400 hover:text-yellow-400 transition-all duration-300 ease-in-out;
+  @apply text-blue-400 hover:text-yellow-400;
 }
-
