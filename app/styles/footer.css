@@ -1,55 +1,48 @@
 /* Footer Styles */
 .footer-section {
-  @apply bg-gray-900 shadow-black text-white w-full min-h-[40vh] py-8;
+  @apply bg-gray-900 text-gray-300 py-8;
 }
 
 .footer-top-container {
-  @apply mx-auto px-4;
+  @apply max-w-7xl mx-auto px-6;
 }
 
-/* Grid layout for footer content */
 .footer-grid {
-  @apply grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4;
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
 }
 
 .footer-title {
-  @apply text-2xl font-bold;
-}
-
-.footer-description {
-  @apply text-sm mt-2 text-gray-400;
+  @apply text-xl font-bold text-white;
 }
 
 .footer-subtitle {
-  @apply font-semibold mb-4 text-gray-300;
+  @apply text-lg font-semibold text-white mb-2;
+}
+
+.footer-description {
+  @apply text-sm text-gray-400;
 }
 
 .footer-links {
-  @apply list-none;
+  @apply space-y-2;
 }
 
 .footer-link {
-  @apply text-sm font-bold text-blue-400 hover:text-yellow-400 transition-colors duration-300;
+  @apply text-gray-400 hover:text-white transition-colors;
 }
 
-/* Social media icons */
 .footer-social-icons {
-  @apply flex gap-4 mt-4;
+  @apply flex space-x-4 mt-2;
 }
 
 .footer-social-icon {
-  @apply text-blue-400 hover:text-yellow-400 transition-colors duration-300;
+  @apply text-gray-400 hover:text-white transition-colors text-xl;
 }
 
-/* Footer bottom section */
 .footer-bottom-container {
-  @apply py-4 bg-gray-950 shadow-2xl text-lg text-center;
+  @apply mt-8 border-t border-gray-700 pt-4 text-center;
 }
 
 .footer-bottom-text {
   @apply text-sm text-gray-500;
-}
-
-.footer-bottom-text .footer-link {
-  @apply text-blue-400 hover:text-yellow-400;
 }
