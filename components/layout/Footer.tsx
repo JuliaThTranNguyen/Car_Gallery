@@ -90,10 +90,12 @@ function Footer() {
 
       <div className="footer-bottom-container">
         <p className="footer-bottom-text">
+          @JuliaThTranNguyen | All rights reserved.
+        </p>
+        <p className="footer-bottom-text">
           <Link href={sourceCode} className="footer-link">
             © 2025 Car Gallery@Github
           </Link>
-          | @JuliaThTranNguyen | All rights reserved.
         </p>
       </div>
     </footer>

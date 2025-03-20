@@ -1,7 +1,9 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
 import CarImage from "@/public/hero_car.png";
+import Button from "../ui/Button";
 
 function Hero() {
   return (
@@ -19,7 +21,7 @@ function Hero() {
         </p>
 
         <div className="outline-button-wrapper">
-          <button className="outline-button">Get started !</button>
+          <Button text="Get started" variant="outline" />
         </div>
       </div>
       <div className="hero_image-container">
@@ -28,6 +30,7 @@ function Hero() {
             src={CarImage}
             alt="car"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{ objectFit: "contain" }}
             className="hero_image"
           />

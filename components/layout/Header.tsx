@@ -5,6 +5,7 @@ import logo from "@/public/car.ico";
 import Image from "next/image";
 import { useState } from "react";
 import Button from "../ui/Button";
+import Navbar from "../ui/Navbar";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,28 +28,7 @@ const Header = () => {
           📑 Menu
         </div>
 
-        <nav className={`nav-menu ${menuOpen ? "show" : "hidden"}`}>
-          <ul className="menu-list">
-            <li className="top-li">
-              <Link href="#">About</Link>
-            </li>
-            <li>
-              <Link href="#">Service</Link>
-            </li>
-            <li>
-              <Link href="#">Contact</Link>
-            </li>
-            <li>
-              <Link href="#">Buy</Link>
-            </li>
-            <li>
-              <Link href="#">Sell</Link>
-            </li>
-            <li>
-              <Link href="#">Rent</Link>
-            </li>
-          </ul>
-        </nav>
+        <Navbar menuOpen={menuOpen} />
 
         <div className="outline-button-wrapper">
           <Button text="Sign up" variant="basic" />

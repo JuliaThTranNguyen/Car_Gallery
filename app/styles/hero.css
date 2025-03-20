@@ -25,7 +25,7 @@
 }
 
 .hero_image-wrapper {
-  @apply relative w-[90%] xl:w-full h-[60vh] xl:h-screen;
+  @apply relative w-full h-[60vh] xl:h-[80vh];
 }
 
 .hero_image {
@@ -48,9 +48,11 @@
   .hero__image-overlay_circle {
     @apply hidden;
   }
+
   .hero__image-overlay_bg {
     @apply w-full h-[50%];
   }
+
   .hero_image {
     @apply pb-10 pr-12;
   }
@@ -60,9 +62,11 @@
   .hero__image-overlay_bg {
     @apply hidden;
   }
+
   .hero__image-overlay_circle {
     @apply w-[220%] h-[110%] -left-40;
   }
+
   .hero_image {
     @apply pb-20;
   }
@@ -72,9 +76,11 @@
   .hero__image-overlay_bg {
     @apply w-full h-[82%];
   }
+
   .hero_image {
     @apply pt-52 pr-12;
   }
+
   .hero__image-overlay_circle {
     @apply hidden;
   }
